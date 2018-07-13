@@ -9,6 +9,14 @@ export default class Discussion extends Component {
       currentTime: String(new Date())
     };
   }
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({ currentTime: String(new Date())})
+      }, 1000
+    )
+  }
+
   render() {
     const { pageTitle, currentTime } = this.state;
     return (
