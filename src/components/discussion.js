@@ -17,6 +17,10 @@ export default class Discussion extends Component {
     )
   }
 
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+
   render() {
     const { pageTitle, currentTime } = this.state;
     return (
