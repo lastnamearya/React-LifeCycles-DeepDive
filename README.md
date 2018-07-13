@@ -42,4 +42,8 @@
 
 - componentDidCatch()
 
-* * *
+### Component Life Cycle methods that are deprecated now (after React 16.3)
+
+- componentWillMount() // Use constructor()
+- componentWillReceiveProps() // Use getDerivedStateFromProps()
+- componentWillUpdate() // Use getSnapshotBeforeUpdate()
