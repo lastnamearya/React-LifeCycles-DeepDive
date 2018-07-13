@@ -11,15 +11,20 @@ export default class Discussion extends Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    this.liveStream = setInterval(() => {
+      console.log("New Chat Message");
       this.setState({ currentTime: String(new Date())})
       }, 1000
     )
   }
 
-  componentDidUpdate() {
-    console.log("componentDidUpdate");
+  componentWillUnmount() {
+    clearInterval(this.liveStream);
   }
+
+  // componentDidUpdate() {
+  //   console.log("componentDidUpdate");
+  // }
 
   render() {
     const { pageTitle, currentTime } = this.state;
